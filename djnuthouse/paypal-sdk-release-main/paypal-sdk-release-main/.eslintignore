@@ -1,0 +1,6 @@
+build
+dist
+coverage
+CHANGELOG.md
+node_modules
+cdn
