@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>One-Time Payment - Recommended Integration - PayPal JavaScript SDK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .buttons-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>One-Time Payment Recommended Integration</h1>
+
+    <div class="buttons-container">
+      <!-- All buttons are hidden until eligibility is confirmed -->
+      <paypal-button type="pay" hidden></paypal-button>
+      <paypal-pay-later-button hidden></paypal-pay-later-button>
+      <paypal-credit-button hidden></paypal-credit-button>
+    </div>
+    
+    <script src="app.js"></script>
+
+    <!-- Load PayPal SDK -->
+    <script
+      async
+      src="https://www.sandbox.paypal.com/web-sdk/v6/core"
+      onload="onPayPalWebSdkLoaded()"
+    ></script>
+  </body>
+</html>
